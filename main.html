@@ -1,16 +1,26 @@
 <!DOCTYPE html>
-
 <html>
-
-<head>
-	<link rel="stylesheet" href="styles.css">
-</head>
-
-<body>
-	<!-- the entire body must be written by student -->
-    <script type="text/javascript" src="./script.js">
-</script>
-
-</body>
-
+  <head>
+    <style>
+      #line {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 200px;
+        height: 2px;
+        background-color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="line"></div>
+    <script>
+      var angle = 0;
+      setInterval(function() {
+        angle += 2;
+        document.getElementById("line").style.transform = "rotate(" + angle + "deg)";
+      }, 20);
+    </script>
+  </body>
 </html>
